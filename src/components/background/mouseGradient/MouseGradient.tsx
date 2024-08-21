@@ -21,7 +21,9 @@ const MouseGradient: React.FC<MouseGradientProps> = ({ children }) => {
     <div
       className={styles.container}
       style={{
-        backgroundImage: `radial-gradient( circle 600px at ${mousePosition.x}px ${mousePosition.y}px, rgba(255, 255, 255, 0.1)  , black 50% )`,
+        backgroundImage: `radial-gradient( circle 200px at ${mousePosition.x}px ${mousePosition.y}px, 
+    #00aeff65,
+    #00aeff00`,
       }}
     >
       {children}

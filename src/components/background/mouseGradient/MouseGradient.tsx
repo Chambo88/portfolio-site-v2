@@ -1,10 +1,7 @@
-import React, { ReactNode, useEffect } from "react";
+import React, { useEffect } from "react";
 import styles from "./MouseGradient.module.css";
 
-interface MouseGradientProps {
-  children: ReactNode;
-}
-const MouseGradient: React.FC<MouseGradientProps> = ({ children }) => {
+const MouseGradient: React.FC = () => {
   const [mousePosition, setMousePosition] = React.useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -21,13 +18,11 @@ const MouseGradient: React.FC<MouseGradientProps> = ({ children }) => {
     <div
       className={styles.container}
       style={{
-        backgroundImage: `radial-gradient( circle 200px at ${mousePosition.x}px ${mousePosition.y}px, 
-    #00aeff65,
-    #00aeff00`,
+        backgroundImage: `radial-gradient( circle 400px at ${mousePosition.x}px ${mousePosition.y}px, 
+    #00B7FF30,
+    #00B7FF00`,
       }}
-    >
-      {children}
-    </div>
+    ></div>
   );
 };
 

@@ -40,24 +40,51 @@
   right: 0;
   width: 200px;
   height: 100px;
-  background-color: red;
   z-index: -9;
 }
-s .gradient-lower-left {
+
+.gradient-lower-left {
   position: absolute;
-  bottom: 0;
+  bottom: -600px;
   left: 0;
-  width: 100px;
-  height: 100px;
-  background-color: green;
+  width: 1000px;
+  height: 1200px;
+  opacity: 0.3;
+  background-image: radial-gradient(
+    circle 400px,
+    rgba(0, 255, 106, 0.459),
+    rgba(0, 255, 149, 0.341) 25%,
+    rgba(0, 255, 213, 0.341) 50%,
+    rgba(0, 255, 221, 0.204) 75%,
+    #11b8e200
+  );
+  z-index: -8;
+}
+
+.gradient-lower-left-two {
+  position: absolute;
+  bottom: -370px;
+  left: -250px;
+  width: 1000px;
+  height: 1200px;
+  opacity: 0.2;
+  background-image: radial-gradient(circle 300px, #00ff95a1 30%, #11b8e200);
+  z-index: -8;
+}
+
+.gradient-lower-left-three {
+  position: absolute;
+  bottom: -750px;
+  left: 400px;
+  width: 1000px;
+  height: 1200px;
+  opacity: 0.2;
+  background-image: radial-gradient(circle 300px, #00ff95a1 30%, #11b8e200);
   z-index: -8;
 }
 
 .gradient-lower-right {
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   bottom: -500px;
   right: -600px;
   width: 1200px;

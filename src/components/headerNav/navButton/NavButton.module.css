@@ -1,0 +1,30 @@
+.button {
+  position: relative;
+  display: block;
+  padding: 8px 16px; /* Adjust padding for larger clickable area */
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.buttonText {
+  font-size: 12px;
+  letter-spacing: var(--letter-spacing-big);
+  position: relative;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.637);
+  transition: text-decoration 0.5s ease, color 0.5s ease;
+}
+
+.activeButtonText {
+  color: white;
+  font-weight: 400;
+}
+
+.button:hover .buttonText {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  color: white;
+  font-weight: 400;
+}

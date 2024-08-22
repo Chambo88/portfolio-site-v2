@@ -9,7 +9,6 @@
   color: white;
 
   background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -24,6 +23,7 @@ body,
   padding: 0;
 }
 
+button,
 h2,
 h3,
 h4,

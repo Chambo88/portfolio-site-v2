@@ -1,0 +1,8 @@
+.chip {
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  background-color: #f0f0f01f;
+  font-size: 13px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow */
+}

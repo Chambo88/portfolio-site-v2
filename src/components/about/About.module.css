@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  align-items: flex-end;
+  width: 250px;
+  height: 100%;
+  font-size: 13px;
+  line-height: 2rem;
+  letter-spacing: 0.15rem;
+}
+.bold {
+  display: inline;
+  font-weight: bold;
+}

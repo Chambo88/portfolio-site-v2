@@ -1,16 +1,17 @@
 .container {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
+  justify-content: space-between;
+  height: 240px;
 }
-
 .name {
   font-size: 50px;
   font-weight: 100;
   letter-spacing: 0.05rem;
+  margin-left: 12px;
 }
 .sub-title {
-  color: rgb(0, 255, 34);
-  letter-spacing: 0.5rem;
-  margin-top: 20px;
+  color: var(--highlight-color);
+  letter-spacing: var(--letter-spacing-big);
+  margin-left: 16px;
 }

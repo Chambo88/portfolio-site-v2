@@ -7,8 +7,11 @@ const Background: React.FC = () => {
   return (
     <div className={styles.container}>
       <ColorGradients lower_left={true} upper_right={true} />
-      <MouseImageGradient url="src/assets/background_texture_two.png" />
-      <MouseImageGradient url="src/assets/blueprint_bg.png" />
+      <MouseImageGradient
+        url="src/assets/background_texture_two.png"
+        stretch={false}
+      />
+      <MouseImageGradient url="src/assets/blueprint_bg.png" stretch={true} />
       <MouseGradient />
     </div>
   );

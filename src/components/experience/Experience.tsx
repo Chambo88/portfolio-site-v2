@@ -1,13 +1,19 @@
 import styles from "./Experience.module.css";
 import Job from "./Job/Job";
 import { jobData } from "./JobData.ts";
+import SimpleBar from "simplebar-react";
+import "simplebar-react/dist/simplebar.min.css";
 
 const Experience: React.FC = () => {
   return (
-    <div className={styles.container}>
-      {jobData.map((job, index) => {
-        return <Job key={index} {...job} />;
-      })}
+    <div className={styles.marginContainer}>
+      <SimpleBar className={styles.container}>
+        <div className={styles.spacer}></div>
+        {jobData.map((job, index) => {
+          return <Job key={index} {...job} />;
+        })}
+        <div className={styles.spacer}></div>
+      </SimpleBar>
     </div>
   );
 };

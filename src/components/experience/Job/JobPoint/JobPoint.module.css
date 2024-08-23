@@ -1,0 +1,16 @@
+.container {
+  position: relative;
+  line-height: 1.5rem;
+  font-weight: 300;
+  font-size: 13px;
+  color: var(--faded-text-color);
+  margin-bottom: 10px;
+}
+.dash {
+  position: absolute;
+  left: -40px;
+  z-index: 1;
+  width: 10px;
+  height: 1;
+  border-color: var(--faded-text-color);
+}

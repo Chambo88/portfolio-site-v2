@@ -3,9 +3,13 @@ import styles from "./ImageGradient.module.css";
 
 interface MouseImageGradientProps {
   url: string;
+  stretch: boolean;
 }
 
-const MouseImageGradient: React.FC<MouseImageGradientProps> = ({ url }) => {
+const MouseImageGradient: React.FC<MouseImageGradientProps> = ({
+  url,
+  stretch,
+}) => {
   const [mousePosition, setMousePosition] = React.useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -33,6 +37,8 @@ const MouseImageGradient: React.FC<MouseImageGradientProps> = ({ url }) => {
             rgba(0, 0, 0, 1) 30%,
             rgba(0, 0, 0, 0) 70%
           )`,
+        backgroundSize: stretch ? "100vw 100vh" : "100vw",
+        objectFit: stretch ? undefined : "cover",
       }}
     ></div>
   );

@@ -1,8 +1,15 @@
 .chip {
-  display: block;
-  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
   border-radius: 9999px;
-  background-color: #f0f0f01f;
-  font-size: 13px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow */
+  background-color: #152318a1;
+  color: var(--highlight-color);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  padding: 0.2rem 1rem 0.2rem 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 20px;
 }

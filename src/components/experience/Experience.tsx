@@ -1,8 +1,7 @@
-import styles from "./Experience.module.css";
 import Job from "./Job/Job";
 import { jobData } from "./JobData.ts";
 import SimpleBar from "simplebar-react";
-import "simplebar-react/dist/simplebar.min.css";
+import styles from "./Experience.module.css";
 
 const Experience: React.FC = () => {
   return (

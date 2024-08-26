@@ -1,10 +1,12 @@
 import { useState } from "react";
 import styles from "./App.module.css";
+import "simplebar-react/dist/simplebar.min.css";
 import Background from "./components/background/Background";
 import HeaderNav from "./components/headerNav/HeaderNav";
 import About from "./components/about/About";
 import { Page } from "./enums/enums";
 import Experience from "./components/experience/Experience";
+import Projects from "./components/projects/projects";
 
 function App() {
   const [page, setPage] = useState<number>(0);
@@ -29,6 +31,8 @@ function App() {
         return <About />;
       case Page.experience:
         return <Experience />;
+      case Page.projects:
+        return <Projects />;
       default:
         return <div>Page not found</div>;
     }

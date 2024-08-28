@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import styles from "./MouseGradient.module.css";
+// import styles from "./MouseGradient.module.css";
+import ColorGradient from "../colorGradientsLayout/colorGradient/ColorGradient";
 
 const MouseGradient: React.FC = () => {
   const [mousePosition, setMousePosition] = React.useState({ x: 0, y: 0 });
@@ -15,14 +16,13 @@ const MouseGradient: React.FC = () => {
   }, []);
 
   return (
-    <div
-      className={styles.container}
-      style={{
-        backgroundImage: `radial-gradient( circle 400px at ${mousePosition.x}px ${mousePosition.y}px, 
-    #00B7FF30,
-    #00B7FF00`,
-      }}
-    ></div>
+    <ColorGradient
+      color="#00B7FF"
+      size="400px"
+      position_x={mousePosition.x + "px"}
+      position_y={mousePosition.y + "px"}
+      opacity={0.3}
+    />
   );
 };
 

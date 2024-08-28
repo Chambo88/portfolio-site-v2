@@ -1,0 +1,17 @@
+.grid-overlay {
+  position: absolute;
+  background-size: 100vw 100vh;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: -100;
+  transition: opacity ease 1s;
+}
+
+.gradient {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -101;
+  transition: opacity ease 1s;
+}

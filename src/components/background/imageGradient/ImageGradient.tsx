@@ -28,14 +28,18 @@ const MouseImageGradient: React.FC<MouseImageGradientProps> = ({
       style={{
         backgroundImage: `url(${url})`,
         WebkitMaskImage: `radial-gradient(
-            circle 450px at ${mousePosition.x}px ${mousePosition.y}px,
-            rgba(0, 0, 0, 1) 30%,
-            rgba(0, 0, 0, 0) 70%
+            circle 250px at ${mousePosition.x}px ${mousePosition.y}px,
+            rgba(0, 0, 0, 1),
+            rgba(0, 0, 0, 0.4) 30%,
+            rgba(0, 0, 0, 0.1) 60%,
+            rgba(0, 0, 0, 0)
           )`,
         maskImage: `radial-gradient(
-            circle 450px at ${mousePosition.x}px ${mousePosition.y}px,
-            rgba(0, 0, 0, 1) 30%,
-            rgba(0, 0, 0, 0) 70%
+            circle 250px at ${mousePosition.x}px ${mousePosition.y}px,
+            rgba(0, 0, 0, 1),
+            rgba(0, 0, 0, 0.4) 30%,
+            rgba(0, 0, 0, 0.1) 60%,
+            rgba(0, 0, 0, 0)
           )`,
         backgroundSize: stretch ? "100vw 100vh" : "100vw",
         objectFit: stretch ? undefined : "cover",

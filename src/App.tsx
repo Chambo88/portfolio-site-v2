@@ -6,7 +6,7 @@ import HeaderNav from "./components/headerNav/HeaderNav";
 import About from "./components/about/About";
 import { Page } from "./enums/enums";
 import Experience from "./components/experience/Experience";
-import Projects from "./components/projects/projects";
+import Projects from "./components/projects/Projects";
 
 function App() {
   const [page, setPage] = useState<number>(0);
@@ -40,7 +40,7 @@ function App() {
 
   return (
     <div className={styles.app}>
-      <Background />
+      <Background page={page} />
       <div className={styles.twoCols}>
         <div className={styles.colOne}>
           <HeaderNav page={page} setPage={handlePageChange} />

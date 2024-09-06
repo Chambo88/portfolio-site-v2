@@ -10,4 +10,9 @@ export const projectData: ProjectData[] = [
     date: "2020",
     what: "SOCIAL MEDIA / MOBILE APP",
   },
+  {
+    title: "Beacon",
+    date: "2020",
+    what: "SOCIAL MEDIA / MOBILE APP",
+  },
 ];

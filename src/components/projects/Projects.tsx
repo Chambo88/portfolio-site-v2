@@ -1,14 +1,20 @@
 import React from "react";
 import styles from "./Projects.module.css";
-import { projectData } from "./Projectdata";
+import { ProjectEnum } from "../../enums/enums";
 import ProjectLink from "./projectLink/ProjectLink";
+import { PageEnum } from "../../enums/enums";
 
-const Projects: React.FC = () => {
+interface ProjectsProps {
+  setPage: (num: number) => void;
+}
+
+const Projects: React.FC<ProjectsProps> = ({ setPage }) => {
   return (
     <nav className={styles.container}>
-      {projectData.map((proj, index) => {
-        return <ProjectLink key={index} {...proj} />;
-      })}
+      <ProjectLink
+        proj={ProjectEnum.beacon}
+        onClick={() => setPage(PageEnum.beacon)}
+      />
     </nav>
   );
 };

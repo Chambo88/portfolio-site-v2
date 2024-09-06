@@ -3,36 +3,42 @@
   min-width: 375px;
   height: 100%;
 }
-
-.two-cols {
-  position: absolute;
+.border-container {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: space-between;
-  padding-top: 7vh;
-  padding-left: 4vw;
-  padding-bottom: 7vh;
-  padding-right: 4vw;
+  padding: 3vw;
   z-index: 0;
 }
-
-.col-one {
+.threeCols {
+  box-sizing: border-box;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  width: 100%;
+  height: 100%;
 }
-
+.col-one {
+  flex-basis: 25%;
+  height: 100%;
+}
+.col-one-top {
+  height: 50%;
+  width: 100%;
+}
+.col-one-bottom {
+  height: 50%;
+  width: 100%;
+}
 .pageContainer {
+  flex-basis: 75%;
   transition: opacity 0.3s ease-in-out;
+  height: 100%;
   opacity: 1;
 }
-
 .fadeOut {
   opacity: 0;
 }
-
 .fadeIn {
   opacity: 1;
 }

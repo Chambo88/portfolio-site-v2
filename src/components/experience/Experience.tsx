@@ -5,14 +5,16 @@ import styles from "./Experience.module.css";
 
 const Experience: React.FC = () => {
   return (
-    <div className={styles.marginContainer}>
-      <SimpleBar className={styles.container}>
-        <div className={styles.spacer}></div>
-        {jobData.map((job, index) => {
-          return <Job key={index} {...job} />;
-        })}
-        <div className={styles.spacer}></div>
-      </SimpleBar>
+    <div className={styles.pageContainer}>
+      <div className={styles.marginContainer}>
+        <SimpleBar className={styles.container}>
+          <div className={styles.spacer}></div>
+          {jobData.map((job, index) => {
+            return <Job key={index} {...job} />;
+          })}
+          <div className={styles.spacer}></div>
+        </SimpleBar>
+      </div>
     </div>
   );
 };

@@ -2,7 +2,7 @@ import styles from "./background.module.css";
 import ColorGradientsLayout from "./colorGradientsLayout/ColorGradientsLayout";
 import MouseGradient from "./mouseGradient/MouseGradient";
 import MouseImageGradient from "./imageGradient/ImageGradient";
-import { Page } from "../../enums/enums";
+import { PageEnum } from "../../enums/enums";
 
 interface BackgroundProps {
   page: number;
@@ -10,16 +10,16 @@ interface BackgroundProps {
 
 const Background: React.FC<BackgroundProps> = ({ page }) => {
   const lower_left_map: { [key: number]: boolean } = {
-    [Page.about]: false,
-    [Page.experience]: false,
-    [Page.projects]: true,
-    [Page.contact]: false,
+    [PageEnum.About]: false,
+    [PageEnum.Experience]: false,
+    [PageEnum.Projects]: true,
+    [PageEnum.Contact]: false,
   };
   const upper_right_map: { [key: number]: boolean } = {
-    [Page.about]: false,
-    [Page.experience]: true,
-    [Page.projects]: true,
-    [Page.contact]: false,
+    [PageEnum.About]: false,
+    [PageEnum.Experience]: true,
+    [PageEnum.Projects]: true,
+    [PageEnum.Contact]: false,
   };
 
   return (

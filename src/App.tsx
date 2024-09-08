@@ -30,17 +30,17 @@ function App() {
 
   const renderPage = () => {
     switch (currentPage) {
-      case PageEnum.about:
+      case PageEnum.About:
         return <About />;
-      case PageEnum.experience:
+      case PageEnum.Experience:
         return <Experience />;
-      case PageEnum.projects:
+      case PageEnum.Projects:
         return <Projects setPage={handlePageChange} />;
-      case PageEnum.beacon:
+      case PageEnum.Beacon:
         return (
           <ProjectPage
             setBottomLeftComponent={setBottomLeftComponent}
-            proj={ProjectEnum.beacon}
+            proj={ProjectEnum.Beacon}
           />
         );
       default:

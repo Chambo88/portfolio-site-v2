@@ -8,7 +8,10 @@
   width: 100%;
   height: 100%;
   display: flex;
-  padding: 3vw;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  padding-top: 6.5vh;
+  padding-bottom: 6.5vh;
   z-index: 0;
 }
 .threeCols {

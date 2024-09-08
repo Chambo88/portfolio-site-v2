@@ -9,6 +9,9 @@
   font-weight: 100;
   letter-spacing: 0.05rem;
   margin-left: 12px;
+  white-space: nowrap;
+  overflow: visible;
+  text-overflow: clip;
 }
 .sub-title {
   color: var(--highlight-color);

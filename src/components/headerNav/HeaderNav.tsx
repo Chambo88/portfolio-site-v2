@@ -1,6 +1,6 @@
 import styles from "./HeaderNav.module.css";
 import NavButton from "./navButton/NavButton";
-import { Page } from "../../enums/enums";
+import { PageEnum } from "../../enums/enums";
 
 interface HeaderNavProps {
   setPage: (newPage: number) => void;
@@ -14,26 +14,26 @@ const HeaderNav: React.FC<HeaderNavProps> = ({ page, setPage }) => {
       <h3 className={styles.subTitle}> SWE / INNOVATOR</h3>
       <nav>
         <NavButton
-          onClick={() => setPage(Page.about)}
-          isActive={page === Page.about}
+          onClick={() => setPage(PageEnum.About)}
+          isActive={page === PageEnum.About}
         >
           ABOUT
         </NavButton>
         <NavButton
-          onClick={() => setPage(Page.experience)}
-          isActive={page === Page.experience}
+          onClick={() => setPage(PageEnum.Experience)}
+          isActive={page === PageEnum.Experience}
         >
           EXPERIENCE
         </NavButton>
         <NavButton
-          onClick={() => setPage(Page.projects)}
-          isActive={page === Page.projects}
+          onClick={() => setPage(PageEnum.Projects)}
+          isActive={page === PageEnum.Projects}
         >
           PROJECTS
         </NavButton>
         <NavButton
-          onClick={() => setPage(Page.contact)}
-          isActive={page === Page.contact}
+          onClick={() => setPage(PageEnum.Contact)}
+          isActive={page === PageEnum.Contact}
         >
           CONTACT
         </NavButton>

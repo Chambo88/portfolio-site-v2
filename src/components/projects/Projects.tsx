@@ -12,8 +12,8 @@ const Projects: React.FC<ProjectsProps> = ({ setPage }) => {
   return (
     <nav className={styles.container}>
       <ProjectLink
-        proj={ProjectEnum.beacon}
-        onClick={() => setPage(PageEnum.beacon)}
+        proj={ProjectEnum.Beacon}
+        onClick={() => setPage(PageEnum.Beacon)}
       />
     </nav>
   );

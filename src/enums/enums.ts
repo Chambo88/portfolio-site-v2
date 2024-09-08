@@ -1,12 +1,17 @@
 export enum PageEnum {
-  about,
-  experience,
-  projects,
-  contact,
-  beacon,
+  About,
+  Experience,
+  Projects,
+  Contact,
+  Beacon,
 }
 
 export enum ProjectEnum {
-  beacon,
-  test2,
+  Beacon,
+  Test2,
+}
+
+export enum ProjectMediaEnum {
+  Mobile,
+  Web,
 }

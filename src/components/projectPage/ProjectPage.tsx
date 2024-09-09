@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 import { projectData } from "../projects/ProjectData";
 import { ProjectMediaEnum, ProjectEnum } from "../../enums/enums";
+import { ProjectTitle } from "../projects/projectTitle/ProjectTitle";
 import styles from "./ProjectPage.module.css";
+import ProjectParagraph from "./projectParagraph/ProjectParagraph";
 
 interface ProjectPageProps {
   proj: ProjectEnum;
@@ -14,11 +16,14 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
 }) => {
   useEffect(() => {
     setBottomLeftComponent(
-      <div>
-        <h3>{projectData[proj].title}</h3>
+      <div className={styles.sysDContainer}>
+        <img
+          className={styles.sysDImage}
+          src={projectData[proj].sysDSrc}
+          alt="system design of beacon"
+        ></img>
       </div>
     );
-
     return () => {
       setBottomLeftComponent(null);
     };
@@ -28,9 +33,18 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
     switch (projectData[proj].mediaType) {
       case ProjectMediaEnum.Mobile:
         return (
-          <video width="360" height="800" controls>
-            <source src={projectData[proj].videoSrc} type="video/mp4" />
-          </video>
+          <>
+            <div className={styles.phoneBars}>
+              {Array.from({ length: 50 }, (_, i) => (
+                <div key={i} className={styles.phoneLine}></div>
+              ))}
+            </div>
+
+            <div className={styles.phoneCase}></div>
+            <video controls autoPlay loop className={styles.video}>
+              <source src={projectData[proj].videoSrc} type="video/mp4" />
+            </video>
+          </>
         );
       case ProjectMediaEnum.Web:
         return <div />;
@@ -42,7 +56,26 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
   return (
     <div className={styles.pageContainer}>
       <div className={styles.centerColumn}>{renderMidContent()}</div>
-      <div className={styles.rightColumn}>TWO TRAILER PARK GIRLS</div>
+      <div className={styles.rightColumn}>
+        <div className={styles.overFlow}>
+          <div className={styles.title}>
+            <ProjectTitle proj={proj} />
+          </div>
+          <div className={styles.topLine}></div>
+          <div className={styles.bottomLine}></div>
+          <div className={styles.dotted}>
+            {projectData[proj].paragraphs.map((para, index) => {
+              return (
+                <ProjectParagraph
+                  key={index}
+                  title={para.title}
+                  content={para.content}
+                />
+              );
+            })}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

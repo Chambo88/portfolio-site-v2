@@ -57,7 +57,11 @@ function App() {
             <div className={styles.colOneTop}>
               <HeaderNav page={page} setPage={handlePageChange} />
             </div>
-            <div className={styles.colOneBottom}>
+            <div
+              className={`${styles.colOneBottom} ${
+                isTransitioning ? styles.fadeOut : styles.fadeIn
+              }`}
+            >
               {BottomLeftComponent ? BottomLeftComponent : <div></div>}
             </div>
           </div>

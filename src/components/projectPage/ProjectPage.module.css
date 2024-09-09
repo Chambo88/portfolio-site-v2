@@ -4,6 +4,7 @@
   width: 100%;
 }
 .center-column {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,6 +12,101 @@
 }
 .right-column {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
   height: 100%;
   width: 33.33%;
+}
+.mobile-container {
+  position: relative;
+  display: flex;
+  height: 100%;
+}
+.phone-bars {
+  position: absolute;
+  right: 8vw;
+  top: 49px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  height: 80vh;
+  width: 50px;
+  overflow: hidden;
+  z-index: 1000;
+}
+.phone-line {
+  height: 1px;
+  min-height: 1px;
+  width: 8px;
+  background-color: var(--faded-text-color);
+}
+.video {
+  width: auto;
+  height: 70vh;
+}
+.phone-case {
+  position: absolute;
+  background-image: url("src/assets/phone_frame.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(30%);
+  height: 95vh;
+  width: 91vh;
+  pointer-events: none;
+  z-index: 1;
+}
+.dotted:before {
+  content: "";
+  position: absolute;
+  border-left: 4px dotted var(--faded-text-color);
+  top: 11px;
+  bottom: 35px;
+  left: -3px;
+}
+.dotted {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+}
+.top-line {
+  position: absolute;
+  height: 1px;
+  width: 25px;
+  background-color: var(--faded-text-color);
+  top: 6px;
+  overflow: visible;
+  left: -25px;
+  z-index: 1;
+}
+.bottom-line {
+  position: absolute;
+  height: 1px;
+  width: 25px;
+  background-color: var(--faded-text-color);
+  bottom: 54px;
+  overflow: visible;
+  left: -24px;
+  z-index: 1;
+}
+.over-flow {
+  overflow: visible;
+  position: relative;
+}
+.title {
+  position: absolute;
+  top: -150px;
+}
+.sys-d-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.sys-d-image {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
 }

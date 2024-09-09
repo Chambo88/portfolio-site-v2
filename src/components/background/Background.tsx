@@ -12,14 +12,16 @@ const Background: React.FC<BackgroundProps> = ({ page }) => {
   const lower_left_map: { [key: number]: boolean } = {
     [PageEnum.About]: false,
     [PageEnum.Experience]: false,
-    [PageEnum.Projects]: true,
+    [PageEnum.Projects]: false,
     [PageEnum.Contact]: false,
+    [PageEnum.Beacon]: true,
   };
   const upper_right_map: { [key: number]: boolean } = {
     [PageEnum.About]: false,
     [PageEnum.Experience]: true,
-    [PageEnum.Projects]: true,
+    [PageEnum.Projects]: false,
     [PageEnum.Contact]: false,
+    [PageEnum.Beacon]: false,
   };
 
   return (

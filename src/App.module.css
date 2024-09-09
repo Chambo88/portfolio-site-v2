@@ -2,6 +2,7 @@
   width: 100%;
   min-width: 375px;
   height: 100%;
+  overflow: hidden;
 }
 .border-container {
   box-sizing: border-box;
@@ -23,6 +24,8 @@
 }
 .col-one {
   flex-basis: 25%;
+  flex-grow: 0;
+  flex-shrink: 0;
   height: 100%;
 }
 .col-one-top {
@@ -32,16 +35,18 @@
 .col-one-bottom {
   height: 50%;
   width: 100%;
+  transition: opacity 0.3s ease-in-out;
+  overflow: hidden;
 }
-.pageContainer {
+.page-container {
   flex-basis: 75%;
   transition: opacity 0.3s ease-in-out;
   height: 100%;
   opacity: 1;
 }
-.fadeOut {
+.fade-out {
   opacity: 0;
 }
-.fadeIn {
+.fade-in {
   opacity: 1;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Projects.module.css";
 import { ProjectEnum } from "../../enums/enums";
-import ProjectLink from "./projectLink/ProjectLink";
+import ProjectLink from "./projectTitle/ProjectTitle";
 import { PageEnum } from "../../enums/enums";
 
 interface ProjectsProps {

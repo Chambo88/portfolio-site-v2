@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+.left-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.right-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-right: 1vw;
+}
+.line {
+  height: 1px;
+  width: 25px;
+  background-color: var(--faded-text-color);
+  margin-right: 20px;
+  margin-top: 6px;
+}
+.title {
+  padding-bottom: 20px;
+  font-size: 13px;
+  color: var(--highlight-color);
+  letter-spacing: var(--letter-spacing-big);
+}
+.content {
+  padding-bottom: 40px;
+  font-size: 13px;
+  line-height: 1.5rem;
+  letter-spacing: 0.1rem;
+  color: var(--faded-text-color);
+}

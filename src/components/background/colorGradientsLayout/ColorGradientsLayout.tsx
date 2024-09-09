@@ -6,13 +6,6 @@ interface ColorGradientsLayoutProps {
   upper_right: boolean;
 }
 
-// position_x: string;
-// position_y: string;
-// color: string;
-// enabled: boolean;
-// opacity: number;
-// size: string;
-
 const ColorGradientsLayout: React.FC<ColorGradientsLayoutProps> = ({
   lower_left,
   upper_right,

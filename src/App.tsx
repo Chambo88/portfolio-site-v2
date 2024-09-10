@@ -8,13 +8,18 @@ import { PageEnum, ProjectEnum } from "./enums/enums";
 import Experience from "./components/experience/Experience";
 import Projects from "./components/projects/Projects";
 import ProjectPage from "./components/projectPage/ProjectPage";
+import Contact from "./components/contact/contact";
 
 function App() {
   const [page, setPage] = useState<number>(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [currentPage, setCurrentPage] = useState<number>(page);
-  const [BottomLeftComponent, setBottomLeftComponent] =
+  const [bottomLeftComponent, setBottomLeftComponent] =
     useState<React.ReactNode | null>(null);
+  const [backgroundHoverImageSrc, setBackgroundHoverImageSrc] = useState<
+    string | null
+  >(null);
+  const [displayBackground, setDisplayBackground] = useState<boolean>(false);
 
   const handlePageChange = (newPage: number) => {
     if (newPage !== page) {
@@ -35,7 +40,13 @@ function App() {
       case PageEnum.Experience:
         return <Experience />;
       case PageEnum.Projects:
-        return <Projects setPage={handlePageChange} />;
+        return (
+          <Projects
+            setPage={handlePageChange}
+            setBackgroundHoverImageSrc={setBackgroundHoverImageSrc}
+            setDisplayBackground={setDisplayBackground}
+          />
+        );
       case PageEnum.Beacon:
         return (
           <ProjectPage
@@ -43,6 +54,8 @@ function App() {
             proj={ProjectEnum.Beacon}
           />
         );
+      case PageEnum.Contact:
+        return <Contact />;
       default:
         return <div>Page not found</div>;
     }
@@ -50,7 +63,11 @@ function App() {
 
   return (
     <div className={styles.app}>
-      <Background page={page} />
+      <Background
+        page={page}
+        backgroundHover={backgroundHoverImageSrc}
+        displayBackground={displayBackground}
+      />
       <div className={styles.borderContainer}>
         <div className={styles.threeCols}>
           <div className={styles.colOne}>
@@ -62,7 +79,7 @@ function App() {
                 isTransitioning ? styles.fadeOut : styles.fadeIn
               }`}
             >
-              {BottomLeftComponent ? BottomLeftComponent : <div></div>}
+              {bottomLeftComponent ? bottomLeftComponent : <div></div>}
             </div>
           </div>
 

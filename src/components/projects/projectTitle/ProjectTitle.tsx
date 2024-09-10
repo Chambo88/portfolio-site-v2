@@ -6,15 +6,13 @@ import { ProjectEnum } from "../../../enums/enums";
 interface ProjectTitleProps {
   proj: ProjectEnum;
 }
-interface ProjectLinkProps extends ProjectTitleProps {
-  onClick: () => void;
-}
 
-const ProjectLink: React.FC<ProjectLinkProps> = ({ proj, onClick }) => {
+const ProjectLink: React.FC<ProjectTitleProps> = ({ proj }) => {
   return (
-    <div className={styles.container} onClick={onClick}>
+    <div className={styles.container}>
       <h3
         className={styles.subTitle}
+        style={{ marginBottom: "5px" }}
       >{`${projectData[proj].what} / ${projectData[proj].date}`}</h3>
       <h1 className={styles.title}>{projectData[proj].title}</h1>
     </div>

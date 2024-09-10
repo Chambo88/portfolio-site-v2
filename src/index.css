@@ -35,6 +35,10 @@ h5 {
   font-style: normal;
 }
 
+a {
+  text-decoration: none;
+}
+
 .material-icons {
   font-family: "Material Icons";
   font-weight: normal;

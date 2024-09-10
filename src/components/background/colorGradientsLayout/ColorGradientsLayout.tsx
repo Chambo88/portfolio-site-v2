@@ -4,11 +4,15 @@ import styles from "./ColorGradientsLayout.module.css";
 interface ColorGradientsLayoutProps {
   lower_left: boolean;
   upper_right: boolean;
+  lower_right: boolean;
+  mid: boolean;
 }
 
 const ColorGradientsLayout: React.FC<ColorGradientsLayoutProps> = ({
   lower_left,
   upper_right,
+  lower_right,
+  mid,
 }) => {
   return (
     <div className={styles.backgroundColor}>
@@ -59,6 +63,7 @@ const ColorGradientsLayout: React.FC<ColorGradientsLayoutProps> = ({
         position_x="90%"
         position_y="80%"
         opacity={0.4}
+        enabled={lower_right}
       />
       {/* Lower mid */}
       <ColorGradient
@@ -92,6 +97,15 @@ const ColorGradientsLayout: React.FC<ColorGradientsLayoutProps> = ({
         position_y="98%"
         opacity={0.05}
         enabled={lower_left}
+      />
+      {/* mid */}
+      <ColorGradient
+        size="300px"
+        color="#60FFA8"
+        position_x="72%"
+        position_y="78%"
+        opacity={0.15}
+        enabled={mid}
       />
       {/* upper right */}
       <ColorGradient

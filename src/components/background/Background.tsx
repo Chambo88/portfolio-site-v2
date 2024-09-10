@@ -1,4 +1,4 @@
-import styles from "./background.module.css";
+import styles from "./Background.module.css";
 import ColorGradientsLayout from "./colorGradientsLayout/ColorGradientsLayout";
 import MouseGradient from "./mouseGradient/MouseGradient";
 import MouseImageGradient from "./imageGradient/ImageGradient";

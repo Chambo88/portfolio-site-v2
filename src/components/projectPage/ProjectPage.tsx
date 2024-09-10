@@ -3,7 +3,7 @@ import { ProjectMediaEnum, ProjectEnum } from "../../enums/enums";
 import { ProjectTitle } from "../projects/projectTitle/ProjectTitle";
 import styles from "./ProjectPage.module.css";
 import ProjectParagraph from "./projectParagraph/ProjectParagraph";
-import { PROJECT_DATA } from "../projects/ProjectData.ts";
+import { PROJECT_DATA } from "../projects/ProjectData";
 
 interface ProjectPageProps {
   proj: ProjectEnum;

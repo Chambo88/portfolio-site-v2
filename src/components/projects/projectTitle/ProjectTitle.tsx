@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./ProjectTitle.module.css";
-import { PROJECT_DATA } from "../ProjectData.ts";
+import { PROJECT_DATA } from "../ProjectData";
 import { ProjectEnum } from "../../../enums/enums";
 
 interface ProjectTitleProps {

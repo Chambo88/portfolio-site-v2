@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import { projectData } from "../projects/ProjectData";
 import { ProjectMediaEnum, ProjectEnum } from "../../enums/enums";
 import { ProjectTitle } from "../projects/projectTitle/ProjectTitle";
 import styles from "./ProjectPage.module.css";
 import ProjectParagraph from "./projectParagraph/ProjectParagraph";
+import { PROJECT_DATA } from "../projects/ProjectData.ts";
 
 interface ProjectPageProps {
   proj: ProjectEnum;
@@ -19,7 +19,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
       <div className={styles.sysDContainer}>
         <img
           className={styles.sysDImage}
-          src={projectData[proj].sysDSrc}
+          src={PROJECT_DATA[proj].sysDSrc}
           alt="system design of beacon"
         ></img>
       </div>
@@ -30,7 +30,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
   }, [proj, setBottomLeftComponent]);
 
   const renderMidContent = () => {
-    switch (projectData[proj].mediaType) {
+    switch (PROJECT_DATA[proj].mediaType) {
       case ProjectMediaEnum.Mobile:
         return (
           <>
@@ -42,7 +42,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
 
             <div className={styles.phoneCase}></div>
             <video controls autoPlay loop className={styles.video}>
-              <source src={projectData[proj].videoSrc} type="video/mp4" />
+              <source src={PROJECT_DATA[proj].videoSrc} type="video/mp4" />
             </video>
           </>
         );
@@ -64,7 +64,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
           <div className={styles.topLine}></div>
           <div className={styles.bottomLine}></div>
           <div className={styles.dotted}>
-            {projectData[proj].paragraphs.map((para, index) => {
+            {PROJECT_DATA[proj].paragraphs.map((para, index) => {
               return (
                 <ProjectParagraph
                   key={index}

@@ -5,7 +5,7 @@ export type ParagraphInfo = {
   content: string;
 };
 
-export type ProjectData = {
+type ProjectData = {
   title: string;
   date: string;
   what: string;
@@ -15,7 +15,7 @@ export type ProjectData = {
   paragraphs: ParagraphInfo[];
 };
 
-export const projectData: ProjectData[] = [
+export const PROJECT_DATA: ProjectData[] = [
   {
     title: "Beacon",
     date: "2020",

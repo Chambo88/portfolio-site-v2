@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./ProjectTitle.module.css";
-import { projectData } from "../ProjectData";
+import { PROJECT_DATA } from "../ProjectData.ts";
 import { ProjectEnum } from "../../../enums/enums";
 
 interface ProjectTitleProps {
@@ -13,8 +13,8 @@ const ProjectLink: React.FC<ProjectTitleProps> = ({ proj }) => {
       <h3
         className={styles.subTitle}
         style={{ marginBottom: "5px" }}
-      >{`${projectData[proj].what} / ${projectData[proj].date}`}</h3>
-      <h1 className={styles.title}>{projectData[proj].title}</h1>
+      >{`${PROJECT_DATA[proj].what} / ${PROJECT_DATA[proj].date}`}</h3>
+      <h1 className={styles.title}>{PROJECT_DATA[proj].title}</h1>
     </div>
   );
 };
@@ -22,10 +22,10 @@ const ProjectLink: React.FC<ProjectTitleProps> = ({ proj }) => {
 export const ProjectTitle: React.FC<ProjectTitleProps> = ({ proj }) => {
   return (
     <div className={styles.titleContainer}>
-      <h1 className={styles.title}>{projectData[proj].title}</h1>
+      <h1 className={styles.title}>{PROJECT_DATA[proj].title}</h1>
       <h3
         className={styles.subTitle}
-      >{`${projectData[proj].what} / ${projectData[proj].date}`}</h3>
+      >{`${PROJECT_DATA[proj].what} / ${PROJECT_DATA[proj].date}`}</h3>
     </div>
   );
 };

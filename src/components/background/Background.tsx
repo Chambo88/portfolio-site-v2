@@ -2,6 +2,7 @@ import styles from "./Background.module.css";
 import ColorGradientsLayout from "./colorGradientsLayout/ColorGradientsLayout";
 import MouseGradient from "./mouseGradient/MouseGradient";
 import MouseImageGradient from "./imageGradient/ImageGradient";
+import backgroundTexture from "../../assets/background_texture_three.png";
 import { PageEnum } from "../../enums/enums";
 
 interface BackgroundProps {
@@ -52,10 +53,7 @@ const Background: React.FC<BackgroundProps> = ({
         lower_right={lower_right_map[page]}
         mid={mid_map[page]}
       />
-      <MouseImageGradient
-        url="src/assets/background_texture_three.png"
-        stretch={false}
-      />
+      <MouseImageGradient url={backgroundTexture} stretch={false} />
       <div
         className={styles.backgroundImageContainer}
         style={{

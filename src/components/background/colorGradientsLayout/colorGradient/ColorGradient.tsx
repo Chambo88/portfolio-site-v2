@@ -1,4 +1,5 @@
 import styles from "./ColorGradient.module.css";
+import blueprint from "../../../../assets/blueprint_only.png";
 
 interface ColorGradientProps {
   position_x: string;
@@ -47,7 +48,7 @@ const ColorGradient: React.FC<ColorGradientProps> = ({
       <div
         className={styles.gridOverlay}
         style={{
-          backgroundImage: `url(src/assets/blueprint_only.png)`,
+          backgroundImage: `url(${blueprint})`,
           WebkitMaskImage: `radial-gradient(
             circle ${size} at ${position_x} ${position_y},
             hsl(0, 0%, 0%) 0%,

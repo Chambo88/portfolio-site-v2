@@ -1,4 +1,6 @@
 import { ProjectMediaEnum } from "../../enums/enums";
+import beaconVideo from "../../assets/beacon_demo.mp4";
+import beaconSysD from "../../assets/sysDesigns/beacon_SD.png";
 
 export type ParagraphInfo = {
   title: string;
@@ -20,8 +22,8 @@ export const PROJECT_DATA: ProjectData[] = [
     title: "Beacon",
     date: "2020",
     what: "SOCIAL MEDIA / MOBILE APP",
-    videoSrc: "/src/assets/beacon_demo.mp4",
-    sysDSrc: "/src/assets/sysDesigns/beacon_SD.png",
+    videoSrc: beaconVideo,
+    sysDSrc: beaconSysD,
     mediaType: ProjectMediaEnum.Mobile,
     paragraphs: [
       {

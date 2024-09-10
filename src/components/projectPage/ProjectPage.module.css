@@ -47,7 +47,7 @@
 }
 .phone-case {
   position: absolute;
-  background-image: url("src/assets/phone_frame.png");
+  background-image: url("../../assets/phone_frame.png");
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;

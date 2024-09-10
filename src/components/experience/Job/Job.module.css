@@ -19,14 +19,16 @@
 }
 .date {
   width: 150px;
-  color: var(--faded-text-color);
+  color: white;
   padding-right: 8px;
+  letter-spacing: 0.1rem;
+  font-size: 12px;
 }
 .contents {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 550px;
+  width: 490px;
 }
 .jobTitle {
   font-size: 14px;
@@ -37,6 +39,7 @@
   color: white;
   font-size: 13px;
   font-weight: 200;
+  letter-spacing: 0.1rem;
 }
 .description-container {
   flex-direction: column;

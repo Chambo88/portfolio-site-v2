@@ -36,7 +36,7 @@
 }
 .icon-wrapper {
   display: inline-block;
-  color: var(--faded-text-color);
+  color: rgb(177, 177, 177);
   vertical-align: middle;
   margin-right: 12px;
   margin-bottom: -1px;
@@ -57,7 +57,7 @@
   transition: all 0.25s ease;
 }
 .arrow-icon {
-  color: white;
+  color: rgb(177, 177, 177);
 }
 .button:hover .arrow-icon {
   color: var(--highlight-color);

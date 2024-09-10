@@ -104,7 +104,23 @@ const ColorGradientsLayout: React.FC<ColorGradientsLayoutProps> = ({
         color="#60FFA8"
         position_x="72%"
         position_y="78%"
-        opacity={0.15}
+        opacity={0.3}
+        enabled={mid}
+      />
+      <ColorGradient
+        size="200px"
+        color="#60FFD1"
+        position_x="78%"
+        position_y="88%"
+        opacity={0.2}
+        enabled={mid}
+      />
+      <ColorGradient
+        size="200px"
+        color="#60FFE9"
+        position_x="82%"
+        position_y="95%"
+        opacity={0.1}
         enabled={mid}
       />
       {/* upper right */}

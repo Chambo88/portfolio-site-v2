@@ -23,7 +23,7 @@
 }
 .button-text {
   font-size: 12px;
-  letter-spacing: var(--letter-spacing-big);
+  letter-spacing: 0.1rem;
   position: relative;
   text-decoration: none;
   color: white;

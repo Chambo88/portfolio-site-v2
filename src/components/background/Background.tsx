@@ -58,7 +58,7 @@ const Background: React.FC<BackgroundProps> = ({
         className={styles.backgroundImageContainer}
         style={{
           opacity: displayBackground ? 0.8 : 0,
-          backgroundImage: `url(${backgroundHover})`,
+          backgroundImage: backgroundHover ? `url(${backgroundHover})` : "",
         }}
       ></div>
       <MouseGradient />

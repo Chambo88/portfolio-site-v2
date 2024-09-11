@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { ProjectMediaEnum, ProjectEnum } from "../../enums/enums";
 import { ProjectTitle } from "../projects/projectTitle/ProjectTitle";
 import styles from "./ProjectPage.module.css";
@@ -7,28 +6,9 @@ import { PROJECT_DATA } from "../projects/ProjectData";
 
 interface ProjectPageProps {
   proj: ProjectEnum;
-  setBottomLeftComponent: React.Dispatch<React.SetStateAction<React.ReactNode>>;
 }
 
-const ProjectPage: React.FC<ProjectPageProps> = ({
-  proj,
-  setBottomLeftComponent,
-}) => {
-  useEffect(() => {
-    setBottomLeftComponent(
-      <div className={styles.sysDContainer}>
-        <img
-          className={styles.sysDImage}
-          src={PROJECT_DATA[proj].sysDSrc}
-          alt="system design of beacon"
-        ></img>
-      </div>
-    );
-    return () => {
-      setBottomLeftComponent(null);
-    };
-  }, [proj, setBottomLeftComponent]);
-
+const ProjectPage: React.FC<ProjectPageProps> = ({ proj }) => {
   const renderMidContent = () => {
     switch (PROJECT_DATA[proj].mediaType) {
       case ProjectMediaEnum.Mobile:
@@ -55,6 +35,15 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
 
   return (
     <div className={styles.pageContainer}>
+      <div className={styles.leftColumn}>
+        <div className={styles.sysDContainer}>
+          <img
+            className={styles.sysDImage}
+            src={PROJECT_DATA[proj].sysDSrc}
+            alt="system design of beacon"
+          ></img>
+        </div>
+      </div>
       <div className={styles.centerColumn}>{renderMidContent()}</div>
       <div className={styles.rightColumn}>
         <div className={styles.overFlow}>

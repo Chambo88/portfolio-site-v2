@@ -1,12 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./Projects.module.css";
 import { ProjectEnum } from "../../enums/enums";
 import ProjectLink from "./projectTitle/ProjectTitle";
-import { PageEnum } from "../../enums/enums";
 import beaconBackground from "/src/assets/backgroundImages/beacon_background_1000.png";
 
 interface ProjectsProps {
-  setPage: (num: number) => void;
   setBackgroundHoverImageSrc: React.Dispatch<
     React.SetStateAction<string | null>
   >;
@@ -14,10 +13,11 @@ interface ProjectsProps {
 }
 
 const Projects: React.FC<ProjectsProps> = ({
-  setPage,
   setBackgroundHoverImageSrc,
   setDisplayBackground,
 }) => {
+  const navigate = useNavigate();
+
   return (
     <nav className={styles.container}>
       <div
@@ -27,7 +27,7 @@ const Projects: React.FC<ProjectsProps> = ({
         }}
         onMouseLeave={() => setDisplayBackground(false)}
         onClick={() => {
-          setPage(PageEnum.Beacon);
+          navigate("/projects/beacon");
           setDisplayBackground(false);
         }}
       >

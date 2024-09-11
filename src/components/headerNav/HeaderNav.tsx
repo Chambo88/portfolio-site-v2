@@ -1,42 +1,28 @@
+import { Link, useLocation } from "react-router-dom";
 import styles from "./HeaderNav.module.css";
 import NavButton from "./navButton/NavButton";
-import { PageEnum } from "../../enums/enums";
 
-interface HeaderNavProps {
-  setPage: (newPage: number) => void;
-  page: number;
-}
+const HeaderNav: React.FC = () => {
+  const location = useLocation();
+  const isActive = (path: string) => location.pathname === path;
 
-const HeaderNav: React.FC<HeaderNavProps> = ({ page, setPage }) => {
   return (
     <div className={styles.container}>
       <h1 className={styles.name}>Ben Chamberlain</h1>
       <h3 className={styles.subTitle}> SWE / INNOVATOR</h3>
       <nav>
-        <NavButton
-          onClick={() => setPage(PageEnum.About)}
-          isActive={page === PageEnum.About}
-        >
-          ABOUT
-        </NavButton>
-        <NavButton
-          onClick={() => setPage(PageEnum.Experience)}
-          isActive={page === PageEnum.Experience}
-        >
-          EXPERIENCE
-        </NavButton>
-        <NavButton
-          onClick={() => setPage(PageEnum.Projects)}
-          isActive={page === PageEnum.Projects}
-        >
-          PROJECTS
-        </NavButton>
-        <NavButton
-          onClick={() => setPage(PageEnum.Contact)}
-          isActive={page === PageEnum.Contact}
-        >
-          CONTACT
-        </NavButton>
+        <Link to="/about">
+          <NavButton isActive={isActive("/about")}>ABOUT</NavButton>
+        </Link>
+        <Link to="/experience">
+          <NavButton isActive={isActive("/experience")}>EXPERIENCE</NavButton>
+        </Link>
+        <Link to="/projects">
+          <NavButton isActive={isActive("/projects")}>PROJECTS</NavButton>
+        </Link>
+        <Link to="/contact">
+          <NavButton isActive={isActive("/contact")}>CONTACT</NavButton>
+        </Link>
       </nav>
     </div>
   );

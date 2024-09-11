@@ -1,3 +1,4 @@
+import { useLocation } from "react-router-dom";
 import styles from "./Background.module.css";
 import ColorGradientsLayout from "./colorGradientsLayout/ColorGradientsLayout";
 import MouseGradient from "./mouseGradient/MouseGradient";
@@ -6,16 +7,33 @@ import backgroundTexture from "../../assets/background_texture_three.png";
 import { PageEnum } from "../../enums/enums";
 
 interface BackgroundProps {
-  page: number;
   backgroundHover: string | null;
   displayBackground: boolean;
 }
 
 const Background: React.FC<BackgroundProps> = ({
-  page,
   backgroundHover,
   displayBackground,
 }) => {
+  const location = useLocation();
+
+  const page = (() => {
+    switch (location.pathname) {
+      case "/about":
+        return PageEnum.About;
+      case "/experience":
+        return PageEnum.Experience;
+      case "/projects":
+        return PageEnum.Projects;
+      case "/contact":
+        return PageEnum.Contact;
+      case "/projects/beacon":
+        return PageEnum.Beacon;
+      default:
+        return PageEnum.About;
+    }
+  })();
+
   const lower_left_map: { [key: number]: boolean } = {
     [PageEnum.About]: false,
     [PageEnum.Experience]: false,

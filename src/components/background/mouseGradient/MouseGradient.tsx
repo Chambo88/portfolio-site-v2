@@ -18,10 +18,10 @@ const MouseGradient: React.FC = () => {
   return (
     <ColorGradient
       color="#00B7FF"
-      size="400px"
+      size="500px"
       position_x={mousePosition.x + "px"}
       position_y={mousePosition.y + "px"}
-      opacity={0.3}
+      opacity={0.22}
     />
   );
 };

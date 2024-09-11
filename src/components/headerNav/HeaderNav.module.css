@@ -1,8 +1,10 @@
 .container {
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 240px;
+  z-index: 100;
 }
 .name {
   font-size: 50px;

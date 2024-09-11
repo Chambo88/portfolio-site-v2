@@ -11,8 +11,8 @@ const HeaderNav: React.FC = () => {
       <h1 className={styles.name}>Ben Chamberlain</h1>
       <h3 className={styles.subTitle}> SWE / INNOVATOR</h3>
       <nav>
-        <Link to="/about">
-          <NavButton isActive={isActive("/about")}>ABOUT</NavButton>
+        <Link to="/">
+          <NavButton isActive={isActive("/")}>ABOUT</NavButton>
         </Link>
         <Link to="/experience">
           <NavButton isActive={isActive("/experience")}>EXPERIENCE</NavButton>

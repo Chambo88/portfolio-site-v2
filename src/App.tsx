@@ -39,14 +39,6 @@ function App() {
               }
             />
             <Route
-              path="/about"
-              element={
-                <MotionWrapper>
-                  <About />
-                </MotionWrapper>
-              }
-            />
-            <Route
               path="/experience"
               element={
                 <MotionWrapper>

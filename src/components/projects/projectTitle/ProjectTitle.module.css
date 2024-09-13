@@ -5,9 +5,14 @@
   margin-top: 10px;
   gap: 0px 20px;
   cursor: pointer;
+  box-sizing: border-box;
+  border: 1px solid transparent; /* Add transparent border */
+  transition: border 0.3s ease;
+  border-radius: 10px;
+  padding: 15px;
 }
-.container:hover .title {
-  color: var(--highlight-color);
+.container:hover {
+  border: 1px solid var(--highlight-color);
 }
 .title {
   font-size: 60px;

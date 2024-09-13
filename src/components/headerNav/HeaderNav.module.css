@@ -2,7 +2,7 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 20px;
   height: 240px;
   z-index: 100;
 }
@@ -19,4 +19,15 @@
   color: var(--highlight-color);
   letter-spacing: var(--letter-spacing-big);
   margin-left: 16px;
+}
+.projectNav {
+  margin-left: 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+}
+.projectNav.show {
+  max-height: 50px;
+  opacity: 1;
 }

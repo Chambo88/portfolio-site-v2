@@ -5,6 +5,7 @@ import NavButton from "./navButton/NavButton";
 const HeaderNav: React.FC = () => {
   const location = useLocation();
   const isActive = (path: string) => location.pathname === path;
+  const isProject = () => ["/projects/beacon"].includes(location.pathname);
 
   return (
     <div className={styles.container}>
@@ -20,6 +21,15 @@ const HeaderNav: React.FC = () => {
         <Link to="/projects">
           <NavButton isActive={isActive("/projects")}>PROJECTS</NavButton>
         </Link>
+        <div
+          className={`${styles.projectNav} ${isProject() ? styles.show : ""}`}
+        >
+          <Link to="/projects/beacon">
+            <NavButton isActive={isActive("/projects/beacon")}>
+              &mdash; BEACON
+            </NavButton>
+          </Link>
+        </div>
         <Link to="/contact">
           <NavButton isActive={isActive("/contact")}>CONTACT</NavButton>
         </Link>

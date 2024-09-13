@@ -13,6 +13,7 @@ type ProjectData = {
   what: string;
   videoSrc: string | undefined;
   sysDSrc: string;
+  gitSrc: string;
   mediaType: ProjectMediaEnum;
   paragraphs: ParagraphInfo[];
 };
@@ -24,6 +25,7 @@ export const PROJECT_DATA: ProjectData[] = [
     what: "SOCIAL MEDIA / MOBILE APP",
     videoSrc: beaconVideo,
     sysDSrc: beaconSysD,
+    gitSrc: "https://github.com/Chambo88/BeaconV1",
     mediaType: ProjectMediaEnum.Mobile,
     paragraphs: [
       {
@@ -50,6 +52,7 @@ export const PROJECT_DATA: ProjectData[] = [
     what: "SOCIAL MEDIA / MOBILE APP",
     videoSrc: "",
     sysDSrc: "/src/sysDesigns/beacon_SD.png",
+    gitSrc: "https://github.com/Chambo88/BeaconV1",
     mediaType: ProjectMediaEnum.Mobile,
     paragraphs: [
       {

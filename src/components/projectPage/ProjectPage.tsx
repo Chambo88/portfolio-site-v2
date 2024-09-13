@@ -45,26 +45,44 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ proj }) => {
         </div>
       </div>
       <div className={styles.centerColumn}>{renderMidContent()}</div>
-      <div className={styles.rightColumn}>
-        <div className={styles.overFlow}>
-          <div className={styles.title}>
-            <ProjectTitle proj={proj} />
-          </div>
-          <div className={styles.topLine}></div>
-          <div className={styles.bottomLine}></div>
-          <div className={styles.dotted}>
-            {PROJECT_DATA[proj].paragraphs.map((para, index) => {
-              return (
-                <ProjectParagraph
-                  key={index}
-                  title={para.title}
-                  content={para.content}
-                />
-              );
-            })}
+      {/* This is some of the worst code of my life, Im sorry to anyone trying to read this (probably me...)
+          had to do this to both get a scrollable bar when screen gets too small and also have the lines on outside whilst
+          having the dotted lines as an absolute and clipping them. MY GOD (Ive given up on good names here, it works, IM DONE)
+      */}
+      <section className={styles.rightColumn}>
+        <div className={styles.rightColWrapper}>
+          <div className={styles.rightColWrapperTwo}>
+            <div className={styles.topper}></div>
+            <div className={styles.cols}>
+              <div className={styles.lineCol}>
+                <div className={styles.bottomLine}></div>
+              </div>
+              <div className={styles.contentCol}>
+                <div style={{ position: "relative", overflow: "visible" }}>
+                  <ProjectTitle proj={proj} />
+                  <div className={styles.topLine}></div>
+                </div>
+                <div className={styles.con}>
+                  <div className={styles.conTwo}>
+                    <div className={styles.dottedCon}>
+                      <div className={styles.dotted}></div>
+                    </div>
+                  </div>
+                  {PROJECT_DATA[proj].paragraphs.map((para, index) => {
+                    return (
+                      <ProjectParagraph
+                        key={index}
+                        title={para.title}
+                        content={para.content}
+                      />
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

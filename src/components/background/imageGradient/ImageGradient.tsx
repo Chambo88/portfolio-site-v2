@@ -41,7 +41,7 @@ const MouseImageGradient: React.FC<MouseImageGradientProps> = ({
             rgba(0, 0, 0, 0.1) 60%,
             rgba(0, 0, 0, 0)
           )`,
-        backgroundSize: stretch ? "100vw 100vh" : "100vw",
+        backgroundSize: stretch ? "100% 100%" : "100%",
         objectFit: stretch ? undefined : "cover",
       }}
     ></div>

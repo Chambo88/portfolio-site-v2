@@ -1,7 +1,7 @@
 .container {
   position: absolute;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: inherit;
   overflow: hidden;
 }
 
@@ -63,8 +63,8 @@
 }
 .background-image-container {
   position: absolute;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   z-index: -1;
   transition: opacity 0.3s ease;

@@ -19,9 +19,8 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ proj }) => {
                 <div key={i} className={styles.phoneLine}></div>
               ))}
             </div>
-
             <div className={styles.phoneCase}></div>
-            <video controls autoPlay loop className={styles.video}>
+            <video controls autoPlay muted loop className={styles.video}>
               <source src={PROJECT_DATA[proj].videoSrc} type="video/mp4" />
             </video>
           </>

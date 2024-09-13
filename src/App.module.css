@@ -1,8 +1,9 @@
 .app {
+  position: relative;
   width: 100%;
-  min-width: 375px;
+  min-width: 800px;
   height: 100%;
-  overflow: hidden;
+  min-height: 600px;
 }
 .border-container {
   position: relative;

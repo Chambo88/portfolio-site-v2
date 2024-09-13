@@ -17,11 +17,16 @@
 .sub-title {
   color: var(--highlight-color);
   letter-spacing: var(--letter-spacing-big);
+  line-height: 20px;
   font-weight: 200;
   font-size: 13px;
 }
+
 .titleContainer {
   display: flex;
   gap: 15px;
   flex-direction: column;
+  overflow: hidden;
+  container-type: inline-size;
+  container-name: my-container;
 }

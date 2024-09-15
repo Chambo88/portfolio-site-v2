@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import "simplebar-react/dist/simplebar.min.css";
@@ -10,8 +10,8 @@ import { ProjectEnum } from "./enums/enums";
 import Experience from "./components/experience/Experience";
 import Projects from "./components/projects/Projects";
 import ProjectPage from "./components/projectPage/ProjectPage";
-import Contact from "./components/contact/contact";
-import SplashScreen from "./components/splash/splash";
+import Contact from "./components/contact/Contact";
+import SplashScreen from "./components/splash/Splash";
 
 function App() {
   const [backgroundHoverImageSrc, setBackgroundHoverImageSrc] = useState<

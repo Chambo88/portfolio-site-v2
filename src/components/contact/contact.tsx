@@ -1,4 +1,4 @@
-import styles from "./contact.module.css";
+import styles from "./Contact.module.css";
 import GitHub from "@mui/icons-material/GitHub";
 import LinkedIn from "@mui/icons-material/LinkedIn";
 import Email from "@mui/icons-material/Email";

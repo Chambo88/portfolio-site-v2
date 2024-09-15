@@ -9,7 +9,7 @@ const SplashScreen = () => {
       <div className={styles.background}></div>
       <div className={styles.splashScreen}>
         <h1>Ben Chamberlain</h1>
-        <h2>SWE</h2>
+        <h1>SWE</h1>
       </div>
       <div
         className={styles.gradient}

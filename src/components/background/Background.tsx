@@ -52,7 +52,7 @@ const Background: React.FC<BackgroundProps> = ({
     [PageEnum.About]: true,
     [PageEnum.Experience]: true,
     [PageEnum.Projects]: true,
-    [PageEnum.Contact]: false,
+    [PageEnum.Contact]: true,
     [PageEnum.Beacon]: true,
   };
   const mid_map: { [key: number]: boolean } = {

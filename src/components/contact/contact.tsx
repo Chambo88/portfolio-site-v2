@@ -1,6 +1,5 @@
 import styles from "./contact.module.css";
 import GitHub from "@mui/icons-material/GitHub";
-import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import LinkedIn from "@mui/icons-material/LinkedIn";
 import Email from "@mui/icons-material/Email";
 import Download from "@mui/icons-material/Download";
@@ -10,42 +9,42 @@ const Contact: React.FC = () => {
     <div className={styles.container}>
       <nav className={styles.navContainer}>
         <ContactLink
-          name={"GITHUB"}
+          name={"Github"}
           src={"https://github.com/Chambo88"}
-          icon={<GitHub fontSize="large" />}
+          icon={<GitHub className={styles.iconSize} />}
         />
         <ContactLink
-          name={"LINKEDIN"}
+          name={"LinkedIn"}
           src={"https://www.linkedin.com/in/ben-chamberlain-a39948198/"}
-          icon={<LinkedIn fontSize="large" />}
-        />
-        <ContactLink
-          name={"BENCHAMBERLAIN88@GMAIL.COM"}
-          src={
-            "mailto:BenChamberlain88@Gmail.com?subject=Hello&body=I%20want%20to%20contact%20you!"
-          }
-          icon={<Email fontSize="large" />}
+          icon={<LinkedIn className={styles.iconSize} />}
         />
         <a href="/Ben_Chamberlain_CV.pdf" download>
-          <button className={styles.button}>
+          <div className={styles.button}>
+            <div className={styles.buttonText}>2024_CV</div>
             <div className={styles.iconWrapper}>
-              <Download fontSize="large" />
+              <Download className={styles.iconSize} />
             </div>
-            <div className={styles.buttonText}>BEN_CHAMBERLAIN_CV.PDF</div>
-          </button>
+          </div>
         </a>
+        <ContactLink
+          name={"BenChamberlain@gmail.com"}
+          src={
+            "mailto:BenChamberlain88@Gmail.com?body=%0D%0A%0D%0ASent%20from%20BenChamberlain.dev"
+          }
+          icon={<Email className={styles.iconSize} />}
+        />
       </nav>
     </div>
   );
 };
 
-interface ContactLink {
+interface ContactLinkProps {
   name: string;
   src: string;
   icon: JSX.Element;
 }
 
-const ContactLink: React.FC<ContactLink> = ({ name, src, icon }) => {
+const ContactLink: React.FC<ContactLinkProps> = ({ name, src, icon }) => {
   const handleClick = () => {
     if (src.startsWith("mail")) {
       window.location.href = src;
@@ -54,15 +53,10 @@ const ContactLink: React.FC<ContactLink> = ({ name, src, icon }) => {
     }
   };
   return (
-    <button className={styles.button} onClick={handleClick}>
+    <div className={styles.button} onClick={handleClick}>
+      <h1 className={styles.buttonText}>{name}</h1>
       <div className={styles.iconWrapper}>{icon}</div>
-      <div className={styles.buttonText}>{name}</div>
-      <div className={styles.arrowAnchor}>
-        <div className={styles.transitionContainer}>
-          <ArrowOutwardIcon className={styles.arrowIcon} />
-        </div>
-      </div>
-    </button>
+    </div>
   );
 };
 

@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
-import styles from "./App.module.css";
+import { motion, AnimatePresence } from "framer-motion";
 import "simplebar-react/dist/simplebar.min.css";
+import styles from "./App.module.css";
 import Background from "./components/background/Background";
 import HeaderNav from "./components/headerNav/HeaderNav";
 import About from "./components/about/About";
@@ -10,7 +11,7 @@ import Experience from "./components/experience/Experience";
 import Projects from "./components/projects/Projects";
 import ProjectPage from "./components/projectPage/ProjectPage";
 import Contact from "./components/contact/contact";
-import { motion, AnimatePresence } from "framer-motion";
+import SplashScreen from "./components/splash/splash";
 
 function App() {
   const [backgroundHoverImageSrc, setBackgroundHoverImageSrc] = useState<
@@ -21,6 +22,7 @@ function App() {
 
   return (
     <div className={styles.app}>
+      <SplashScreen />
       <Background
         backgroundHover={backgroundHoverImageSrc}
         displayBackground={displayBackground}

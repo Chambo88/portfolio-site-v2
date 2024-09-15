@@ -31,18 +31,18 @@ export const PROJECT_DATA: ProjectData[] = [
       {
         title: "PROBLEM",
         content:
-          "Beacon aims to solve two problems, one is the lack of a simple UI to view whats on, \
-           two is the fact invites are bound by group chats and direct messages. \
+          "Beacon aims to solve two problems; the lack of a simple UI to view whats on and \
+           invites being bound to group chats and DM's. \
            People very rarely reach out outside of their usual group chats for anything outside \
-           of events that require a facebook event page despite having far more connections. ",
+           of big events that require a Facebook page despite having many more connections. ",
       },
       {
         title: "SOLUTION",
         content:
           "By using beacons, users can make events in seconds displayed to personalised friend groups \
-           changing the method of invitation to broadcasting, similar to how a story functions. \
-           By using a map layout, users can instantly see what friends are out and where, bars or flats that friends have invited you too \
-           and gigs/live events on for the evening",
+           changing the method of invitation to broadcasting. \
+           By using a map layout, users can instantly see what friends are out, beacons that friends have invited you to \
+           and gigs on for the evening",
       },
     ],
   },

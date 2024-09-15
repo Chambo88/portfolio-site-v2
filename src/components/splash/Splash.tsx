@@ -1,4 +1,4 @@
-import styles from "./splash.module.css";
+import styles from "./Splash.module.css";
 
 const SplashScreen = () => {
   const color = "#20A0F5";

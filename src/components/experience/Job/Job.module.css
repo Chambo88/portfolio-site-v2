@@ -31,13 +31,13 @@
   width: 490px;
 }
 .jobTitle {
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: var(--letter-spacing-big);
   color: var(--highlight-color);
 }
 .jobSubtitle {
   color: white;
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 0.1rem;
 }
 .description-container {

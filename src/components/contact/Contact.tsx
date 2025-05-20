@@ -20,7 +20,7 @@ const Contact: React.FC = () => {
         />
         <a href="/Ben_Chamberlain_CV.pdf" download>
           <div className={styles.button}>
-            <div className={styles.buttonText}>2024_CV</div>
+            <div className={styles.buttonText}>2025_CV</div>
             <div className={styles.iconWrapper}>
               <Download className={styles.iconSize} />
             </div>

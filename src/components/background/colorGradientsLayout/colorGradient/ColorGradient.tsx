@@ -23,7 +23,7 @@ const ColorGradient: React.FC<ColorGradientProps> = ({
       <div
         className={styles.gradient}
         style={{
-          backgroundImage: `radial-gradient(
+          backgroundImage: `radial-gradient(in srgb
           circle ${size} at ${position_x} ${position_y},
             ${color}FF 0%,
             ${color}EA 5.3%,
@@ -49,7 +49,7 @@ const ColorGradient: React.FC<ColorGradientProps> = ({
         className={styles.gridOverlay}
         style={{
           backgroundImage: `url(${blueprint})`,
-          WebkitMaskImage: `radial-gradient(
+          WebkitMaskImage: `radial-gradient( in srgb
             circle ${size} at ${position_x} ${position_y},
             hsl(0, 0%, 0%) 0%,
             hsla(0, 0%, 0%, 0.917) 5.3%,
@@ -68,7 +68,7 @@ const ColorGradient: React.FC<ColorGradientProps> = ({
             hsla(0, 0%, 0%, 0.011) 90.6%,
             hsla(0, 0%, 0%, 0) 100%
           ), `,
-          maskImage: `radial-gradient(
+          maskImage: `radial-gradient( in srgb
             circle calc(${size} * 0.8) at ${position_x} ${position_y},
             hsl(0, 0%, 0%) 0%,
             hsla(0, 0%, 0%, 0.917) 5.3%,
